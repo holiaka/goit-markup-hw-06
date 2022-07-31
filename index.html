@@ -508,6 +508,53 @@
                     <use href="./images/icons/sprit-icons.svg#close-form"></use>
                 </svg>
             </button>
+            
+            <form class="feedback-form">               
+                <strong class="feedback-form-title">Оставьте свои данные, мы вам перезвоним</strong>
+                <div class="feedback-form-group1" role="group">
+                    <label class="feedback-label">
+                        <span class="feedback-id-data">Имя</span>
+                        <input class="feedback-input-data" type="tel" name="person-name">
+                        <svg class="feedback-form-icon" width="18" height="18">
+                            <use href="./images/icons/sprit-icons.svg#person-name"></use>
+                        </svg>
+                    </label>
+                    <label class="feedback-label">
+                        <span class="feedback-id-data">Телефон</span>
+                        <input class="feedback-input-data" type="tel" name="person-telphone">
+                        <svg class="feedback-form-icon" width="18" height="18">
+                            <use href="./images/icons/sprit-icons.svg#phone-number"></use>
+                        </svg>
+                    </label>
+                    <label class="feedback-label">
+                        <span class="feedback-id-data">Почта</span>
+                        <input class="feedback-input-data" type="email" name="person-email">
+                        <svg class="feedback-form-icon" width="18" height="18">
+                            <use href="./images/icons/sprit-icons.svg#email"></use>
+                        </svg>
+                    </label>
+                    <label class="feedback-label-textarea">
+                        <span class="feedback-id-data">Комментарий</span>                      
+                        <textarea class="feedback-text" placeholder="Введите текст" name="feedback-text"></textarea>                     
+                    </label>                       
+                </div>
+                
+                <label class="feedback-agreement">
+                    <input class="feedback-agreement-check none-visualisation" type="checkbox" name="feedback-agreement-option"/>
+                    <svg class="check-icons" width="16" height="15">
+                        <use class="unchecked" href="./images/icons/sprit-icons.svg#no-agree"></use>
+                        <use class="checked" href="./images/icons/sprit-icons.svg#agree"></use>                           
+                    </svg>
+                    <span class="agreement-text">Соглашаюсь с рассылкой и принимаю 
+                        <a class="contract-terms-link link" href="" target="_blank"
+                        rel="noreferrer noopener" aria-label="Форма договора">Условия договора</a>
+                    </span>
+                </label>
+                
+                <button class="submit-btn" type="submit">
+                    <span>Отправить</span>
+                </button>
+            </form>
         </div>
     </div>
 
