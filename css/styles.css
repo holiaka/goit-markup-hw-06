@@ -257,9 +257,10 @@ img {
 
 .footer-divide {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: repeat(2, auto);
+    gap: 70px;
     align-items: baseline;
+    justify-content: space-between;
 }
 
 .footer-list {
@@ -372,36 +373,9 @@ img {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-btn {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-
-    width: 200px;
-    height: 50px;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    color: var(--full-white-text);
-
-    background-color: var(--blue-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: var(--radius);
-    border-color: transparent;
-
-    cursor: pointer;
-
-    transition: backgraund-color var(--animation-time);
-}
-
-.footer-btn:focus,
-.footer-btn:hover {
-    background-color: var(--blue-accent-color);
-}
-
 .footer-btn-icon {
+    margin-left: 10px;
+
     fill: var(--full-white-text);
 }
 
@@ -468,6 +442,7 @@ img {
     font-size: 16px;
     line-height: 1.88;
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
@@ -764,7 +739,7 @@ Model windows and overlay
     margin-bottom: 12px;
 }
 
-.feedback-form-group1 {
+.feedback-form-group {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -772,7 +747,8 @@ Model windows and overlay
 }
 
 .feedback-label {
-    position: relative;
+    display: flex;
+    flex-direction: column;
 
     height: 58px;
     width: 100%;
@@ -781,14 +757,18 @@ Model windows and overlay
 }
 
 .feedback-id-data {
-    display: block;
-    margin-bottom: 4px;
-
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
 
     color: var(--gray-text);
+
+    margin-bottom: 4px;
+}
+
+.feedback-wrap {
+    position: relative;
+
 }
 
 .feedback-input-data {
@@ -807,7 +787,8 @@ Model windows and overlay
 
 .feedback-form-icon {
     position: absolute;
-    bottom: 11px;
+    top: 50%;
+    transform: translateY(-50%);    
     left: 12px;
     fill: var(--gray-black-text);
 
@@ -827,7 +808,8 @@ Model windows and overlay
 
 .validation-icons {
     position: absolute;
-    bottom: 11px;
+    top: 50%;
+    transform: translateY(-50%);
     right: 12px;
 }
 
@@ -893,9 +875,9 @@ Model windows and overlay
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    margin-bottom: 20px;
-
+    
+    gap: 8px;
+    
     cursor: pointer;
 
     margin-bottom: 30px;
@@ -918,11 +900,7 @@ Model windows and overlay
     color: --blue-accent-color;
 }
 
-.check-icons {
-    position: absolute;
-    left: 7px;
-    top: 3px;
-}
+/* .check-icons {} */
 
 .unchecked {
     opacity: 1;
@@ -934,6 +912,11 @@ Model windows and overlay
     transition: opacity var(--animation-time);
 }
 
+.feedback-agreement-check:hover+.check-icons .unchecked,
+.feedback-agreement-check:focus+.check-icons .unchecked {
+    fill: var(--blue-color);
+}
+
 .feedback-agreement-check:checked+.check-icons .unchecked {
     opacity: 0;
 }
@@ -942,34 +925,6 @@ Model windows and overlay
     opacity: 1;
 }
 
-.submit-btn {
-    display: flex;
-    width: 200px;
-    height: 50px;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-
-    color: var(--full-white-text);
-
-    background-color: var(--blue-color);
-    border-color: transparent;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: var(--radius);
-    transition: background-color var(--animation-time);
-
-    cursor: pointer;
-}
-
-.submit-btn:hover,
-.submit-btn:focus {
-    background-color: var(--blue-accent-color);
-}
 
 /* 
 ************************
